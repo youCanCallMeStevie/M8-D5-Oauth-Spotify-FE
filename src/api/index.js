@@ -34,7 +34,6 @@ export const register = async (data) => {
       "Content-type": "application/json",
       "Access-Control-Allow-Origin": "*",
     },
-    credentials: "include",
   };
 
   try {
