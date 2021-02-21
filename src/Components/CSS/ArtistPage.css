@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* body {
+  
+    z-index: 0;
+    background: linear-gradient(
+       */
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Circular", sans-serif;
+  background-color: #000000;
+}
+
+.album-container {
+  max-width: 100vw;
+  width: 100%;
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+}
+
+.mainframe {
+  max-height: calc(100vh - 90px);
+  height: fit-content;
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+}
+.main-content {
+  max-width: calc(100vw - 232px);
+  width: 100%;
+  margin-left: 232px;
+  padding-left: 1rem;
+  overflow-y: auto;
+}
+
+.main-content:before {
+  content: " ";
+  width: 100%;
+  height: 100% !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 42%,
+    rgba(0, 0, 0, 0.2418656938531426) 85%
+  );
+  object-fit: cover;
+}
+
+.main-content > img {
+  z-index: -99;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.jumbotron {
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.nav {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  list-style: none;
+  justify-content: space-between;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.mainframe h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.mainframe h6 {
+  color: white;
+  font-size: 10px;
+  font-weight: 600px;
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+}
+
+.artist-pg-play-btn,
+.artist-pg-follow-btn {
+  max-width: 150px;
+  min-width: 150px;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  color: white;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border-radius: 2rem;
+  text-align: center;
+  border: 1px solid white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.d-none.d-md-flex.column .artist-pg-play-btn,
+.d-none.d-md-flex.column .artist-pg-follow-btn {
+  width: 150px;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  color: white;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border-radius: 2rem;
+  text-align: center;
+  border: 1px solid white;
+  cursor: pointer;
+  display: inline-block;
+}
+/* color: white;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    align-content: center;
+    border-radius: 16px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    letter-spacing: 0.2em; */
+
+/* font-weight: 300px; */
+
+.artist-pg-play-btn:hover,
+.artist-pg-follow-btn:hover {
+  background-color: limegreen;
+  border: 1px solid limegreen;
+  border: none;
+  color: white;
+  box-shadow: 4px 4px 16px rgba(114, 113, 113, 0.3);
+}
+
+.d-none.d-md-flex.column .artist-pg-play-btn:hover,
+.d-none.d-md-flex.column .artist-pg-follow-btn:hover {
+  background-color: limegreen;
+  border: 1px solid limegreen;
+  color: white;
+  box-shadow: 4px 4px 16px rgba(114, 113, 113, 0.3);
+}
+
+.mainframe h6 .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+  background-color: transparent;
+  border: 0px;
+  font-size: 10px;
+  font-weight: 500;
+  color: whitesmoke;
+  letter-spacing: 0.1em;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+/* .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link:hover {
+    background-color: transparent;
+    border: 0px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid limegreen;
+    font-weight: 500;
+    color: whitesmoke; */
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link:after {
+  display: block;
+  content: "";
+  margin-bottom: 10px;
+  border-bottom: solid 2px limegreen;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link:hover:after {
+  transform: scaleX(0.5);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+  border: 0px;
+  padding-bottom: 1px;
+  font-weight: 500;
+  color: whitesmoke;
+  transition: border-bottom 0.5s ease-in-out;
+  -moz-transition: border-bottom 0.5s ease-in-out;
+  -webkit-transition: border-bottom 0.5s ease-in-out;
+}
+.nav-tabs {
+  border-bottom: none;
+}
+
+.dropdown-menu {
+  background-color: rgba(245, 245, 245, 0.788);
+  border-radius: 2px;
+}
+
+.dropdown-menu > .dropdown-item {
+  font-size: 10px;
+  justify-self: center;
+}
+
+.dropdown-item:after {
+  display: block;
+  content: "";
+  margin-bottom: 10px;
+  border-bottom: solid 2px limegreen;
+  transform: scaleX(0);
+  transition: 300ms ease-in-out;
+}
+
+.dropdown-item:hover:after {
+  transform: scaleX(0.5);
+}
+
+.nav {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.main-content h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.main-content h6 {
+  color: white;
+  font-size: 10px;
+  font-weight: 600px;
+}
+
+.main-content h6 .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+  background-color: transparent;
+  border: 0px;
+  font-size: 10px;
+  font-weight: 500;
+  color: whitesmoke;
+  letter-spacing: 0.1rem;
+  margin-bottom: 10px;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link:after {
+  display: block;
+  content: "";
+  margin-bottom: 10px;
+  border-bottom: solid 2px limegreen;
+  transform: scaleX(0);
+  transition: 300ms ease-in-out;
+}

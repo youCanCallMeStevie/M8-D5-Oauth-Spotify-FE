@@ -1,0 +1,42 @@
+@import "../CSS/SASS/General";
+@import "../CSS/SASS/CrossBrowser";
+.liked-song-list {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    .filter {
+      display: flex;
+      align-items: center;
+      input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        color: white;
+      }
+    }
+    .download {
+      display: flex;
+      align-items: center;
+      color: white;
+      .toggle-button {
+        @include toggleButton();
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  .list {
+    width: 100%;
+    tr {
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      th,
+      td {
+        min-width: 25px;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

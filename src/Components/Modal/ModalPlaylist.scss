@@ -1,0 +1,17 @@
+.modal-playlist{
+    position: fixed;
+    top: 50%;
+    height: 50%;
+    z-index: 999999;
+    transform: translate(80%, -50%);
+    -webkit-transform: translate(80%, -50%);
+    -moz-transform: translate(80%, -50%);
+    -ms-transform: translate(80%, -50%);
+    -o-transform: translate(80%, -50%);
+    width: 400px;
+    button{
+        background-color: transparent;
+        border: none;
+
+    }
+}

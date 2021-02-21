@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.aside {
+  background-color: #040404;
+  color: #b3b3b3;
+  max-height: calc(100vh - 90px);
+  height: 100%;
+  top: 0px;
+  max-width: 232px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.logo {
+  width: auto;
+  height: 4rem;
+  padding-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.menu {
+  font-size: 0.9rem;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.menu a {
+  color: #b3b3b3;
+  margin-left: 3px;
+  z-index: 1;
+}
+.menu a:hover {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.search-button {
+  padding: 2px !important;
+}
+
+.menu .col:after {
+  display: inline-block;
+  content: "";
+  background-color: limegreen;
+  transform: scaleX(0);
+  transition: 300ms ease-in-out;
+  z-index: 1000;
+  position: absolute;
+  left: 0px;
+  height: 30px;
+  width: 2.5px;
+}
+
+.menu .col:hover:after {
+  transform: scaleX(1);
+  z-index: 1000;
+}
+
+.menu > .col > a > i {
+  /* fa fonts each icon have different width, aligning Home, Search, Your Library at the same line */
+  width: 40px;
+}
+.menu .col > a {
+  display: flex;
+  align-items: center;
+}
+.menu .col > a > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.menu i {
+  padding-right: 20px;
+}
+.menu h6 {
+  padding-left: 35px;
+}
+.menu hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 96%;
+  background-color: #b3b3b3;
+  height: 1px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.menu li:hover a {
+  color: #fff;
+}
+.list-container {
+  height: calc(100vh - 330px - 60px - 90px - 0px);
+  display: flex;
+  flex-direction: column;
+}
+
+.playlists {
+  position: relative;
+  padding-left: 15%;
+  font-size: 1rem;
+  padding-top: 20px;
+  display: block;
+  overflow-y: auto;
+  white-space: nowrap;
+  float: left;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+.login-button-index a {
+  text-decoration: none;
+  color: #fff;
+}
+.login-button-index:hover span {
+  color: #000;
+}
+.login-button-index.btn-primary {
+  max-width: 300px;
+  width: 90%;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  color: #b3b3b3;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border-radius: 2rem;
+  text-align: center;
+  border: 2px solid #b3b3b3;
+  background-color: transparent;
+}
+
+.login-button-index:hover {
+  transition: 0.4s ease-in;
+  background-color: white;
+  border: 2px solid white;
+  color: black;
+  cursor: pointer;
+}
+
+.stick-to-bottom-index-page {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  bottom: 120px;
+}
+.install-btn {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.install-btn > a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.install-btn > a:hover {
+  color: white;
+}
+
+/* scrollbar */
+/* The emerging W3C standard
+     that is currently Firefox-only */
+* {
+  scrollbar-width: 5vw;
+  scrollbar-color: #040404 #b3b3b3;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 0.75rem;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(70, 70, 70, 0.76);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(110, 110, 110, 0.76);
+}
+
+#show-playlist{
+  background-color: transparent;
+  color:#b3b3b3;
+  border: none;
+  margin-left: -10px;
+}
+
+#add-playlist{
+  margin-top: .5rem;
+  min-width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  color: black;
+}

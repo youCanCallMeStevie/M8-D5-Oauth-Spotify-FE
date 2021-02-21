@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+.card .spotify-card-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.spotify-card-icon {
+  color: grey;
+  opacity: 0.5;
+}
+
+.card:hover .spotify-card-icon {
+  color: limegreen;
+  opacity: 1;
+  z-index: 10001;
+}
+
+.trending.card {
+  max-width: 150px;
+  max-height: 150px;
+  border: 0;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+  margin-top: 1.5rem;
+}
+
+.card {
+  padding: 0px;
+  margin: 0.5rem;
+}
+.trending.card > div {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: -3rem;
+}
+.card > .card-img-top img {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+.overlay-icons {
+  display: none;
+}
+.trending.card:hover .overlay-icons {
+  display: block;
+  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  padding-top: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  transition: 1s ease;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+h6 > a {
+  text-decoration: none;
+  color: white;
+}
+
+h6 > a:hover {
+  text-decoration: none;
+  color: limegreen;
+}
+
+
+#add-to-playlist{
+  display: none;
+}
