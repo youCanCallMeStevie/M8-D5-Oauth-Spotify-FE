@@ -18,16 +18,16 @@ import { Row } from "react-bootstrap";
 import { connect } from "react-redux";
 import { toggleLikeSong, likedSong } from "../store/user/action";
 // import ReactPlayer from "react-player";
-import {withRouter} from "react-router-dom"
+import { withRouter, Link } from "react-router-dom";
 
-const mapStateToProps = (state) => state;
-const mapDispatchToProps = (dispatch) => ({
-  toggleLikeSong: (song) =>
+const mapStateToProps = state => state;
+const mapDispatchToProps = dispatch => ({
+  toggleLikeSong: song =>
     dispatch(toggleLikeSong({ ...song, added: new Date() })),
 });
 export class BottomPlayer extends Component {
   handlePlay = () => {};
-  componentDidUpdate = (prevProps) => {
+  componentDidUpdate = prevProps => {
     if (prevProps.player?.track !== this.props.player?.track) {
       const { track } = this.props.player;
       this.setState({ url: track.preview, played: 0, loaded: 0, pip: false });
@@ -40,10 +40,9 @@ export class BottomPlayer extends Component {
     //   (song) => song.name === track.name
     // );
     let path = this.props.location.pathname;
-
+    console.log("track bottom player", track);
     return (
       <Row
-       
         className="player justify-content-between px-2"
         style={{
           width: "100vw",
@@ -53,7 +52,6 @@ export class BottomPlayer extends Component {
       >
         <div className="player-albumart d-flex align-items-center justify-content-start">
           <div className="nowplaying-albumart mx-3">
-            
             <img
               alt="cover_small"
               src={
@@ -64,8 +62,12 @@ export class BottomPlayer extends Component {
             />
           </div>
           <div className=" d-sm-flex flex-column text-left mr-4">
+            {/* <Link to={`/album/${track.album.id}`}> */}
             <div className="nowplaying-title">{track?.title}</div>
+            {/* </Link> */}
+            {/* <Link to={`/artist/${track.artist.id}/${track.artist.name}`}> */}
             <div className="nowplaying-artist">{track.artist?.name}</div>
+            {/* </Link> */}
           </div>
           <div
             className=" d-lg-flex loved-track mr-3"
@@ -139,4 +141,6 @@ export class BottomPlayer extends Component {
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BottomPlayer));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(BottomPlayer)
+);

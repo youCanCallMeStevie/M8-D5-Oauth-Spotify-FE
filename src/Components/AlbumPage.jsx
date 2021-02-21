@@ -152,7 +152,7 @@ export class AlbumPage extends Component {
                             }
                           >
                             <td style={{ verticalAlign: "middle" }}>
-                              <span className="track-num px-2">{index}</span>
+                              <span className="track-num px-2">{index + 1}</span>
                               <FontAwesomeIcon
                                 icon={faPlay}
                                 size="2x"
@@ -162,15 +162,14 @@ export class AlbumPage extends Component {
                             <td>
                               <ul>
                                 <li className="song">{track.title}</li>
-                                <li>
-                                  <Link
+                                <Link
                                     to={`/artist/${track.artist.id}/${track.artist.name}`}
-                                    className="group"
-                                    style={{ verticalAlign: "middle" }}
-                                  >
+                                  ><li>
+                                  
                                     {track.artist.name}
-                                  </Link>
                                 </li>
+                                </Link>
+
                               </ul>
                             </td>
                             <td>
