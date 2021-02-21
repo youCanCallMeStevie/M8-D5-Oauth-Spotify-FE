@@ -62,12 +62,12 @@ export class BottomPlayer extends Component {
             />
           </div>
           <div className=" d-sm-flex flex-column text-left mr-4">
-            {/* <Link to={`/album/${track.album.id}`}> */}
+            <Link to={`/album/${track.album.id}`}>
             <div className="nowplaying-title">{track?.title}</div>
-            {/* </Link> */}
-            {/* <Link to={`/artist/${track.artist.id}/${track.artist.name}`}> */}
+            </Link>
+            <Link to={`/artist/${track.album.artist.id}/${track.album.artist.name}`}>
             <div className="nowplaying-artist">{track.artist?.name}</div>
-            {/* </Link> */}
+            </Link>
           </div>
           <div
             className=" d-lg-flex loved-track mr-3"
