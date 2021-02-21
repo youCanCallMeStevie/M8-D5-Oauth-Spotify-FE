@@ -50,7 +50,10 @@ export class BottomPlayer extends Component {
           display: path === "/login" || path === "/" ? "none" : "",
         }}
       >
-        <div className="player-albumart d-flex align-items-center justify-content-start">
+        <div
+          className="player-albumart d-flex align-items-center justify-content-start"
+          style={{ visibility: track.album ? "" : "hidden" }}
+        >
           <div className="nowplaying-albumart mx-3">
             <img
               alt="cover_small"
@@ -61,14 +64,14 @@ export class BottomPlayer extends Component {
               }
             />
           </div>
-          <div className=" d-sm-flex flex-column text-left mr-4">
+          {track.album && (<div className=" d-sm-flex flex-column text-left mr-4">
             <Link to={`/album/${track.album.id}`}>
             <div className="nowplaying-title">{track?.title}</div>
             </Link>
             <Link to={`/artist/${track.album.artist.id}/${track.album.artist.name}`}>
             <div className="nowplaying-artist">{track.artist?.name}</div>
             </Link>
-          </div>
+          </div>)}
           <div
             className=" d-lg-flex loved-track mr-3"
             onClick={() => track?.id && this.props.toggleLikeSong(track)}
