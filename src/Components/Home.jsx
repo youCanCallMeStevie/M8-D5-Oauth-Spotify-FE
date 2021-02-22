@@ -6,11 +6,11 @@ import Gallery from "./Gallery";
 import UserBanner from "./UserBanner";
 
 //UTILITIES IMPORTS
-import { getSearch } from "../api";
+import { getSearch, getUserInfo } from "../api";
 
 //ICONS
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUserCircle, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 //ACTIONS IMPORTS
 
@@ -57,6 +57,7 @@ class Home extends Component {
       });
     }, 500);
   };
+  
 
   componentDidMount() {
     this.fetchAlbums();

@@ -5,3 +5,4 @@ export const REJECTED_SONG = "REJECTED_SONG";
 export const CREATE_PLAYLIST = "CREATE_PLAYLIST";
 export const ADD_TO_PLAYLIST = "ADD_TO_PLAYLIST";
 export const TOGGLE_LIKED_SONG = "TOGGLE_LIKED_SONG";
+export const LOGIN= "LOGIN";

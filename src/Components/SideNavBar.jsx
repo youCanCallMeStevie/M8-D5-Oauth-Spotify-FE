@@ -4,6 +4,8 @@ import { withRouter, Link } from "react-router-dom";
 import { InputGroup, FormControl, Button, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { connect } from "react-redux";
+import { Redirect} from "react-router";
+
 import {
   faSearch,
   faHome,
@@ -37,8 +39,11 @@ export class SideNavBar extends Component {
   searchStringHandler = async (e) => {
     if (e.keyCode === 13 || e.key === "Enter") {
       this.props.showSearchResult(this.state.searchString);
-      // let result = await getSearch(this.state.searchString);
-      // console.log(result);
+      console.log("this.props.searchedAlbums", this.props.searchedAlbums)
+      {this.props.searchedAlbums.length > 0 &&
+        <Redirect to={{
+          pathname: '/home'
+        }} />}
     } else {
       this.setState({ searchString: e.currentTarget.value });
     }
